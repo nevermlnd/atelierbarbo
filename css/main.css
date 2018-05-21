@@ -85,8 +85,8 @@ header.menu-closed nav.left {
   order: 1;
   background-color: Black;
   height: 100vh;
-  min-width: 75px;
-  max-width: 100px;
+  min-width: 50px;
+  max-width: 75px;
   width: 10vw;
   display: flex;
   flex-direction: column;
@@ -143,8 +143,8 @@ header.menu-open h1 {
 header.menu-open nav.left {
   background-color: White;
   height: 100vh;
-  min-width: 75px;
-  max-width: 100px;
+  min-width: 50px;
+  max-width: 75px;
   position: absolute;
   width: 10vw;
   top: 0;
@@ -191,8 +191,8 @@ header.menu-open nav.middle a span {
 header.menu-open nav.right {
   background-color: Black;
   height: 100vh;
-  min-width: 75px;
-  max-width: 100px;
+  min-width: 50px;
+  max-width: 75px;
   width: 10vw;
   position: absolute;
   top: 0;
