@@ -175,3 +175,256 @@ header.menu-open nav .lien-boutique {
   position: absolute;
   bottom: 0;
 }
+
+#gallerie {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main-content-header {
+  height: 20vh;
+}
+
+.main-content h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 4vh;
+  color: Black;
+  text-transform: Uppercase;
+  padding-top: 8vh;
+}
+
+.main-content h2 span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 4vh;
+  color: #9c8a5b;
+  padding-right: 0.2em;
+}
+
+.main-content a.decouvrir {
+  background-image: url('/assets/decouvrir-background.jpg');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 2vh;
+  color: Black;
+  padding-right: 0.2em;
+  text-decoration: none;
+
+  margin-top: 1vh;
+  margin-left: 3.7vw;
+}
+
+h4.next-section-link {
+  position: absolute;
+  right: 0;
+  top: 20vh;
+}
+
+h4.previous-section-link {
+  position: absolute;
+  left: 0;
+  top: 20vh;
+}
+
+h4.next-section-link a,
+h4.previous-section-link a {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  padding: 1vw 0;
+  display: block;
+  background-color: #9c8a5b;
+  color: White;
+  line-height: 250%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  text-decoration: none;
+}
+
+h4.next-section-link a span,
+h4.previous-section-link a span {
+  font-weight: 100;
+}
+
+#atelier {
+  position: relative;
+  width: 100%;
+  background-color: White;
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: center;
+}
+
+#atelier-photo {
+  grid-row: 1;
+  grid-column: 1;
+  background-image: url('../assets/atelier.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+#atelier-info {
+  grid-row: 1;
+  grid-column: 2;
+  padding: 0 10%;
+}
+
+#atelier-info h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 4vh;
+  color: Black;
+  text-transform: Uppercase;
+  padding-top: 8vh;
+}
+
+#atelier-info h2 span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 4vh;
+  color: #9c8a5b;
+  padding-right: 0.2em;
+}
+
+#atelier-info p,
+#atelier-info a,
+#atelier-info li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1vw;
+  color: Black;
+  padding-right: 15%;
+}
+
+#atelier-info p,
+#atelier-info li {
+  margin: 2vh 0;
+}
+
+#atelier-info li .details {
+  display: none;
+}
+
+#atelier-info li.active .details {
+  display: block;
+}
+
+#atelier-info li a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#atelier-info li a img {
+  padding-left: 0.5vw;
+}
+
+#atelier-info li a:hover {
+  text-decoration: underline;
+}
+
+#atelier-info li p {
+  margin: 0 0 2vh 0;
+}
+
+#atelier-info li em {
+  font-weight: 400;
+  font-style: normal;
+}
+
+#atelier-info li ul {
+  margin-top: -2vh;
+}
+
+#atelier-info li li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+#contact {
+  width: 100%;
+  background-color: Black;
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: center;
+}
+
+#contact-info {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#contact-map {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+#contact-info {
+  background-color: Black;
+  text-align: center;
+}
+
+#contact-info h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 4vh;
+  color: #9c8a5b;
+  text-transform: Uppercase;
+  padding-top: 8vh;
+}
+
+#contact-info h2 span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 4vh;
+  color: White;
+  padding-right: 0.2em;
+}
+
+#contact-info p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: White;
+  width: 50%;
+  margin: 0 auto;
+  padding: 2vh 0;
+}
+
+#contact-info p a {
+  color: #9c8a5b;
+  text-decoration: none;
+}
+
+#contact-info p a img {
+  height: 4vh;
+  margin: 0 1vh;
+}
+
+#contact-info p a:hover {
+  text-decoration: underline;
+}
+
+#contact #contact-map img {
+  width: 100%;
+}
+
+#footer {
+  background-color: Black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.8vh;
+  color: White;
+  padding: 0.75vw;
+}
