@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { GalleryGridComponent } from './gallery-grid/gallery-grid.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MainComponent } from './main/main.component';
+import { AgmCoreModule } from '@agm/core';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,11 @@ import { MainComponent } from './main/main.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBFTuVBq3vhlbvOeNXhqdyGcVzRP1i2T7I'
+    }),
+    AgmSnazzyInfoWindowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
