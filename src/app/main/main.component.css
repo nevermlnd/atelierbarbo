@@ -341,15 +341,14 @@ header.menu nav.menu-close .lien-boutique {
 
 #sections {
   position: relative;
-  height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 #gallerie {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
 
   position: absolute;
   top: 0;
@@ -444,6 +443,7 @@ h4.previous-section-link a span {
   top: 0;
 
   width: 100%;
+  min-height: 100vh;
   background-color: White;
   display: grid;
   grid-auto-columns: 1fr;
