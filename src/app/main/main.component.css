@@ -13,7 +13,7 @@ header.menu {
 header.menu h1 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 6vh;
+  font-size: 6em;
   color: White;
   order: 2;
   margin-left: 10vw;
@@ -159,7 +159,7 @@ header.menu.opened nav.middle {
 header.menu nav.middle h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 3vh;
+  font-size: 3em;
   color: White;
 }
 
@@ -170,7 +170,7 @@ header.menu nav.middle li {
 header.menu nav.middle a {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 4vh;
+  font-size: 3.9em;
   color: White;
   text-decoration: none;
 }
@@ -178,7 +178,7 @@ header.menu nav.middle a {
 header.menu nav.middle a span {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 4vh;
+  font-size: 1em;
   color: #9c8a5b;
   padding-right: 0.2em;
 }
@@ -343,11 +343,9 @@ header.menu nav.menu-close .lien-boutique {
   position: relative;
   width: 100%;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 #gallerie {
-  min-height: 100vh;
   width: 100%;
 
   position: absolute;
@@ -355,7 +353,8 @@ header.menu nav.menu-close .lien-boutique {
   left: -100vw;
   opacity: 1;
 
-  transition: 1s;
+  transition: left 1s;
+  overflow: hidden;
 }
 
 #gallerie.active {
@@ -365,26 +364,25 @@ header.menu nav.menu-close .lien-boutique {
 
 .main-content {
   width: 70%;
-  margin: 0 auto;
+  margin: 0 auto 7.5vh auto;
 }
 
 .main-content-header {
-  height: 20vh;
+  padding: 4em 0;
 }
 
 .main-content h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 4vh;
+  font-size: 4em;
   color: Black;
   text-transform: Uppercase;
-  padding-top: 8vh;
 }
 
 .main-content h2 span {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 4vh;
+  font-size: 1em;
   color: #9c8a5b;
   padding-right: 0.2em;
 }
@@ -397,7 +395,7 @@ header.menu nav.menu-close .lien-boutique {
 
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 2vh;
+  font-size: 2em;
   color: Black;
   padding-right: 0.2em;
   text-decoration: none;
@@ -429,7 +427,7 @@ h4.previous-section-link a {
   line-height: 250%;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 1.9em;
   text-decoration: none;
 }
 
@@ -443,7 +441,6 @@ h4.previous-section-link a span {
   top: 0;
 
   width: 100%;
-  min-height: 100vh;
   background-color: White;
   display: grid;
   grid-auto-columns: 1fr;
@@ -452,7 +449,8 @@ h4.previous-section-link a span {
   left: 100vw;
   opacity: 1;
 
-  transition: 1s;
+  transition: left 1s;
+  overflow: hidden;
 }
 
 #gallerie .next-section-link,
@@ -479,7 +477,7 @@ h4.previous-section-link a span {
   grid-column: 1;
   background-image: url('../../assets/atelier.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 #atelier-info {
@@ -491,7 +489,7 @@ h4.previous-section-link a span {
 #atelier-info h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 4vh;
+  font-size: 4em;
   color: Black;
   text-transform: Uppercase;
   padding-top: 8vh;
@@ -500,7 +498,7 @@ h4.previous-section-link a span {
 #atelier-info h2 span {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 4vh;
+  font-size: 1em;
   color: #9c8a5b;
   padding-right: 0.2em;
 }
@@ -510,9 +508,19 @@ h4.previous-section-link a span {
 #atelier-info li {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 1vw;
+  font-size: 1em;
   color: Black;
   padding-right: 15%;
+}
+
+#atelier-info p,
+#atelier-info li {
+  font-size: 1.9em;
+}
+
+#atelier-info li p,
+#atelier-info li li {
+  font-size: 1em;
 }
 
 #atelier-info p,
@@ -590,7 +598,7 @@ h4.previous-section-link a span {
 #contact-info h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 4vh;
+  font-size: 4em;
   color: #9c8a5b;
   text-transform: Uppercase;
   padding-top: 8vh;
@@ -599,7 +607,7 @@ h4.previous-section-link a span {
 #contact-info h2 span {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 4vh;
+  font-size: 1em;
   color: White;
   padding-right: 0.2em;
 }
@@ -607,7 +615,7 @@ h4.previous-section-link a span {
 #contact-info p {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 2em;
   color: White;
   width: 50%;
   margin: 0 auto;
@@ -620,7 +628,7 @@ h4.previous-section-link a span {
 }
 
 #contact-info p a img {
-  height: 4vh;
+  height: 2em;
   margin: 0 1vh;
 }
 
@@ -639,7 +647,7 @@ agm-map {
   background-color: Black;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 1.8vh;
+  font-size: 1.8em;
   color: White;
   padding: 0.75vw;
 }

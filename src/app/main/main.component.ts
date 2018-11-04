@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {timer} from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -238,7 +239,22 @@ export class MainComponent {
   mapWidth = "500px";
   mapHeight = "500px";
 
+  sectionsHeight = "100vh";
+  @ViewChild('atelier') atelier: ElementRef;
+  @ViewChild('gallerie') gallerie: ElementRef;
+
   constructor(private route: ActivatedRoute) {
+  }
+
+  calcSectionsHeight() {
+    let styles1 = getComputedStyle(this.atelier.nativeElement);
+    let styles2 = getComputedStyle(this.gallerie.nativeElement);
+    this.sectionsHeight = (this.gallerie.nativeElement.scrollHeight + 3) + "px";
+    console.log(this.sectionsHeight);
+  }
+
+  onSectionsResize() {
+    this.calcSectionsHeight();
   }
 
   onMapResize() {
@@ -247,7 +263,7 @@ export class MainComponent {
     this.mapHeight = this.mapWidth;
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.route.fragment.subscribe((fragment: string) => {
       if (fragment == "gallerie") {
         this.gotoSection(0);
@@ -261,11 +277,13 @@ export class MainComponent {
     let styles = getComputedStyle(this.mapSection.nativeElement);
     this.mapWidth = styles.width;
     this.mapHeight = this.mapWidth;
-  }
 
-  ngOnChanges() {
-    let styles = getComputedStyle(this.mapSection.nativeElement);
-    alert(styles.width);
+    this.calcSectionsHeight();
+
+    let t = timer(100,100);
+    t.subscribe(t=> {
+      this.calcSectionsHeight();
+    });
   }
 
   toggleMenu() {

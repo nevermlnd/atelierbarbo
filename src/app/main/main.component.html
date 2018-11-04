@@ -35,8 +35,8 @@
   </div>
 
   <div id="sectionsStart" #sectionsStart></div>
-  <div id="sections">
-    <section id="gallerie" [ngClass]="{'active': activeSections[0]}">
+  <div id="sections" [ngStyle]="{'height': sectionsHeight}" (window:resize)="onSectionsResize()">
+    <section id="gallerie" [ngClass]="{'active': activeSections[0]}" #gallerie>
       <h4 class="next-section-link"><a href="#" (click)="activateSection(1)"><span>02 - </span>Découvre l'atelier</a></h4>
       <div class="main-content">
         <div class="main-content-header">
@@ -47,7 +47,7 @@
       </div>
     </section>
 
-    <section id="atelier" [ngClass]="{'active': activeSections[1]}">
+    <section id="atelier" [ngClass]="{'active': activeSections[1]}" [ngStyle]="{'height': sectionsHeight}" #atelier>
       <h4 class="previous-section-link"><a href="#" (click)="activateSection(0)"><span>01&nbsp;-&nbsp;</span>Gâte&nbsp;tes&nbsp;yeux</a></h4>
       <section id="atelier-photo"></section>
       <section id="atelier-info">
