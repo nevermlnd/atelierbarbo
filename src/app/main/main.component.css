@@ -5,8 +5,6 @@ header {
 }
 
 header.menu {
-  /*display: flex;
-  align-items: center;*/
   position: relative;
 }
 
@@ -16,7 +14,7 @@ header.menu h1 {
   font-size: 6em;
   color: White;
   order: 2;
-  margin-left: 10vw;
+  margin-left: 10.5%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -362,16 +360,16 @@ header.menu nav.menu-close .lien-boutique {
   opacity: 1;
 }
 
-.main-content {
+#gallerie .main-content {
   width: 70%;
   margin: 0 auto 7.5vh auto;
 }
 
-.main-content-header {
+#gallerie .main-content-header {
   padding: 4em 0;
 }
 
-.main-content h2 {
+#gallerie .main-content h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 4em;
@@ -379,7 +377,7 @@ header.menu nav.menu-close .lien-boutique {
   text-transform: Uppercase;
 }
 
-.main-content h2 span {
+#gallerie .main-content h2 span {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -387,7 +385,7 @@ header.menu nav.menu-close .lien-boutique {
   padding-right: 0.2em;
 }
 
-.main-content a.decouvrir {
+#gallerie .main-content a.decouvrir {
   background-image: url('/assets/decouvrir-background.jpg');
   background-position: bottom;
   background-repeat: repeat-x;
@@ -650,4 +648,97 @@ agm-map {
   font-size: 1.8em;
   color: White;
   padding: 0.75vw;
+}
+
+@media screen and (max-width: 1200px) {
+  header.menu h1 {
+    font-size: 5em;
+    margin-left: 14%;
+  }
+
+  #gallerie .main-content {
+    width: 85%;
+  }
+
+  #contact-info p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #gallerie .main-content {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  header.menu h1 {
+    font-size: 4em;
+    margin-left: 18%;
+  }
+
+  h4.next-section-link, h4.previous-section-link {
+    display: none;
+  }
+
+  #sections, #gallerie, #atelier {
+    position: relative;
+    transition: none;
+    overflow: auto;
+    opacity: 1;
+    left: 0;
+  }
+
+  #gallerie .main-content-header {
+    padding: 4em 10% 4em 10%;
+  }
+
+  #atelier {
+    display: block;
+  }
+
+  #atelier-photo {
+    width: 100%;
+    height: 400px;
+  }
+
+  #atelier-info {
+    padding-bottom: 4em;
+  }
+
+  #contact {
+    display: block;
+  }
+
+  #contact-info {
+    padding-bottom: 4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #gallerie .main-content {
+    width: 100%;
+  }
+
+  header.menu h1 {
+    font-size: 3em;
+    margin-left: 18%;
+  }
+
+  #atelier-info p,
+  #atelier-info a,
+  #atelier-info li {
+    padding-right: 0;
+  }
+}
+
+@media all and (orientation:landscape) {
+  body {
+    background-color: black;
+  }
+}
+
+@media all and (orientation:portrait) {
+  body {
+    background-color: blue;
+  }
 }

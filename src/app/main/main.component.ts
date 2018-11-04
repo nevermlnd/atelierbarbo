@@ -247,10 +247,11 @@ export class MainComponent {
   }
 
   calcSectionsHeight() {
-    let styles1 = getComputedStyle(this.atelier.nativeElement);
-    let styles2 = getComputedStyle(this.gallerie.nativeElement);
-    this.sectionsHeight = (this.gallerie.nativeElement.scrollHeight + 3) + "px";
-    console.log(this.sectionsHeight);
+    if(window.innerWidth <= 800) {
+        this.sectionsHeight = "auto";
+    } else {
+        this.sectionsHeight = (this.gallerie.nativeElement.scrollHeight + 3) + "px";
+    }
   }
 
   onSectionsResize() {
