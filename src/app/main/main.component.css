@@ -136,7 +136,7 @@ header.menu.opened .overlay {
 }
 
 header.menu nav.middle {
-  margin-left: 10vw;
+  margin-left: 10.5%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -288,7 +288,7 @@ header.menu nav.menu-close .lien-boutique {
   background-color: #9c8a5b;
   position: absolute;
   bottom: 0;
-}*/
+}
 
 /* End menu tranvisions v2 */
 
@@ -656,6 +656,10 @@ agm-map {
     margin-left: 14%;
   }
 
+  header.menu nav.middle {
+    margin-left: 14%;
+  }
+
   #gallerie .main-content {
     width: 85%;
   }
@@ -673,6 +677,10 @@ agm-map {
 
   header.menu h1 {
     font-size: 4em;
+    margin-left: 18%;
+  }
+
+  header.menu nav.middle {
     margin-left: 18%;
   }
 
@@ -724,21 +732,113 @@ agm-map {
     margin-left: 18%;
   }
 
+  header.menu nav.middle {
+    margin-left: 18%;
+  }
+
   #atelier-info p,
   #atelier-info a,
   #atelier-info li {
     padding-right: 0;
   }
+
+  header.menu nav.middle a {
+    font-size: 2em;
+  }
+
+  #atelier-info h2,
+  #contact-info h2,
+  #gallerie .main-content h2 {
+    font-size: 3em;
+  }
+
+  #gallerie .main-content a.decouvrir {
+    font-size: 1.5em;
+  }
 }
 
-@media all and (orientation:landscape) {
-  body {
-    background-color: black;
+@media screen and (max-width: 600px) and (orientation:portrait) {
+  header.menu h1 {
+    font-size: 2.5em;
   }
 }
 
 @media all and (orientation:portrait) {
-  body {
-    background-color: blue;
+  header.menu nav.menu-open,
+  header.menu nav.menu-close {
+    width: 100vw;
+    min-height: 50px;
+    max-height: 75px;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 10vw;
+    flex-direction: row;
+  }
+
+  header.menu nav.links {
+    width: 100vw;
+    min-height: 50px;
+    max-height: 75px;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 10vw;
+    flex-direction: row;
+  }
+
+  header.menu.opened nav.links {
+    top: 100%;
+    left:  0;
+    transform: translateY(-100%);
+  }
+
+  header.menu nav.links img {
+    height: 50%;
+    width: auto;
+    margin: 0 0.5em;
+  }
+
+  header.menu.opened nav.menu-open {
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+  }
+
+  header.menu nav img {
+    width: auto;
+    height: 100%;
+  }
+
+  header.menu nav.menu-close .close-menu-link {
+    position: absolute;
+    left: 50%;
+    top: auto;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+  }
+
+  header.menu nav.menu-close .lien-boutique {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  header.menu .overlay {
+    left: 0;
+    top: -100%;
+  }
+
+  header.menu.opened .overlay {
+    top: 0;
+    left: 0;
+  }
+
+  header.menu nav.middle {
+    margin-left: 10%;
+  }
+
+  header.menu h1 {
+    margin-left: 10%;
   }
 }
